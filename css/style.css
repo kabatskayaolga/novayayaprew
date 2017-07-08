@@ -9015,11 +9015,28 @@ footer {
       font-size: 24px; } }
 
 @media (max-width: 520px) {
+  #present .intensive h2 {
+    left: 0;
+    position: initial;
+    font-size: 24px !important;
+    padding: 0 15px; }
+  #present .intensive .left_column {
+    padding: 0;
+    box-shadow: none; }
+  #present .results.intensive h5 {
+    padding: 15px; }
+  .items-section {
+    padding: 40px 15px 40px 30px !important; }
+    .items-section h6 {
+      font-size: 20px !important; }
+  footer .copy {
+    padding: 0 15px; }
   header {
-    padding-bottom: 95px;
+    padding-bottom: 40px;
     background-position: 31% 0%;
     height: auto;
-    background-size: inherit; }
+    background-size: inherit;
+    background-size: cover; }
     header .navbar-nav {
       margin-left: 8%; }
     header .nav > li > a {
@@ -9045,10 +9062,11 @@ footer {
       content: none;
       width: 0; }
     header .words {
-      padding-top: 110px;
+      padding-top: 40px;
       text-align: right;
       padding-right: 38px;
-      padding-left: 120px; }
+      padding-left: 80px;
+      padding-right: 15px; }
   .navbar-default .navbar-collapse, .navbar-default .navbar-form {
     border-color: #ff6666; }
   .navbar-default .navbar-toggle {
