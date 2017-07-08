@@ -9309,3 +9309,12 @@ footer {
 
 button {
   text-transform: uppercase; }
+  @media (min-width: 780px) {
+    button {
+      font-size: 24px !important; } }
+
+@media (min-width: 780px) {
+  .trening .row.text-center {
+    position: absolute;
+    width: 100%;
+    bottom: 0px; } }
