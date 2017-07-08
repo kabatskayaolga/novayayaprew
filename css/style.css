@@ -7932,7 +7932,8 @@ header {
     header {
       min-height: 780px; } }
   header .pinky {
-    color: #ff6666 !important; }
+    color: #ff6666 !important;
+    font-weight: 600; }
   header h5 {
     font-size: 48px;
     font-weight: bold;
