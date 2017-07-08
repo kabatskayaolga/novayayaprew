@@ -8001,7 +8001,9 @@ header {
   background: url(../images/section2.png);
   background-size: cover;
   background-repeat: no-repeat; }
-  .web iframe {
+  .web .iframe, .web frame {
+    position: relative;
+    background-size: cover;
     width: 960px;
     max-width: 100%;
     height: 617px;
@@ -8352,7 +8354,9 @@ header {
     text-align: center;
     width: 100%;
     z-index: 999; }
-  .review iframe {
+  .review .iframe, .review frame {
+    position: relative;
+    background-size: cover;
     width: 98%;
     height: 370px; }
   .review .left_column,
@@ -8460,7 +8464,9 @@ footer {
     font-size: 20px; }
   .web {
     background-position: bottom; }
-    .web iframe {
+    .web .iframe, .web frame {
+      position: relative;
+      background-size: cover;
       width: 800px;
       max-width: 100%;
       height: 492px;
@@ -8586,7 +8592,9 @@ footer {
     top: 64px; }
   .review {
     padding: 150px 40px 127px; }
-  .review iframe {
+  .review .iframe, frame {
+    position: relative;
+    background-size: cover;
     width: 100%;
     height: 337px; }
   .trening h2 {
@@ -8623,7 +8631,9 @@ footer {
   .web {
     background-position: bottom;
     padding-top: 50px; }
-    .web iframe {
+    .web .iframe, .web frame {
+      position: relative;
+      background-size: cover;
       width: 800px;
       max-width: 100%;
       height: 492px;
@@ -8748,7 +8758,9 @@ footer {
     top: 64px; }
   .review {
     padding: 150px 40px 127px; }
-  .review iframe {
+  .review .iframe, frame {
+    position: relative;
+    background-size: cover;
     width: 100%;
     height: 337px; }
   .intensive h3 {
@@ -8830,7 +8842,9 @@ footer {
   .web {
     background-position: bottom;
     padding-top: 50px; }
-    .web iframe {
+    .web .iframe, .web frame {
+      position: relative;
+      background-size: cover;
       width: 470px;
       max-width: 100%;
       height: 392px;
@@ -8962,7 +8976,9 @@ footer {
     top: 44px; }
   .review {
     padding: 150px 40px 127px; }
-  .review iframe {
+  .review .iframe, frame {
+    position: relative;
+    background-size: cover;
     width: 100%;
     height: 337px; }
   .intensive h3 {
@@ -9084,7 +9100,9 @@ footer {
   .web {
     background-position: bottom;
     padding-top: 50px; }
-    .web iframe {
+    .web .iframe, .web frame {
+      position: relative;
+      background-size: cover;
       width: 470px;
       max-width: 100%;
       height: 392px;
@@ -9228,7 +9246,9 @@ footer {
     top: 44px; }
   .review {
     padding: 50px 40px 50px; }
-  .review iframe {
+  .review .iframe, frame {
+    position: relative;
+    background-size: cover;
     width: 100%;
     height: 337px; }
   .intensive h3 {
@@ -9289,7 +9309,7 @@ footer {
       width: auto; }
     .chance #f304c11fe33367 {
       width: auto !important; }
-    .chance .fb_iframe_widget span {
+    .chance .fb_iframe, .chance frame_widget span {
       width: 100% !important; }
   footer .col-span {
     margin: 0;
@@ -9322,3 +9342,20 @@ button {
     position: absolute;
     width: 100%;
     bottom: 0px; } }
+
+.youtube .play {
+  background: url(../images/data.png) no-repeat center center;
+  background-size: 64px 64px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: .8;
+  filter: alpha(opacity=80);
+  transition: all 0.2s ease-out; }
+
+.youtube .play:hover {
+  opacity: 1;
+  filter: alpha(opacity=100); }
+
+.vid {
+  background-image: url(../images/screen.jpg) !important; }

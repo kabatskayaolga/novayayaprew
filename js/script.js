@@ -4767,35 +4767,93 @@ $.magnificPopup.registerModule(RETINA_NS, {
 
 }));
 
-  
-$( document ).ready(function() {
+$('.slider').slick({
+    dots: false,
+    autoplay: true,
+    infinite: true,
+    speed: 1000,
+    fade: true,
+    adaptiveHeight: true,
+    cssEase: 'linear',
+    responsive: [
+      {
+        breakpoint: 769,
+        // здесь добавляем необходимые настройки
+      }
+    ]
+    });
+ $(window).scroll(function() {
+        if ($(this).scrollTop() > 100) {
+            if ($('#upbutton').is(':hidden')) {
+                $('#upbutton').css({opacity : 1}).fadeIn('slow');
+            }
+        } else { $('#upbutton').stop(true, false).fadeOut('fast'); }
+    });
+    $('#upbutton').click(function() {
+        $('html, body').stop().animate({scrollTop : 0}, 300);
+    });
 
-$ ("#hidden_iframe").load(function(){
+     "use strict";
+$(function() {
+    $(".youtube").each(function() {
+        // Based on the YouTube ID, we can easily find the thumbnail image
+        $(this).css('background-image', 'url(http://i.ytimg.com/vi/' + this.id + '/sddefault.jpg)');
 
-  if(submitted){
-   
-     $('#myModal2').modal('show');
-     $('#ajaxform').trigger( 'reset' );
-     submitted=false; 
-     ga('send', 'event', 'Регистрация', 'семинар/вебинар', 'День бухгалтера 2017');
-  }
- 
-});
+        // Overlay the Play icon to make it look like a video player
+        $(this).append($('<div/>', {'class': 'play'}));
 
+        $(document).delegate('#'+this.id, 'click', function() {
+            // Create an iFrame with autoplay set to true
+            var iframe_url = "https://www.youtube.com/embed/" + this.id + "?autoplay=1&autohide=1";
+            if ($(this).data('params')) iframe_url+='&'+$(this).data('params');
 
-      wow = new WOW(
-                      {
-                      boxClass:     'wow',      // default
-                      animateClass: 'animated', // default
-                      mobile:       false,       // default
-                    }
-                    )
-                    wow.init();
+            // The height and width of the iFrame should be the same as parent
+            var iframe = $('<iframe/>', {'frameborder': '0', 'src': iframe_url, 'width': $(this).width(), 'height': $(this).height() })
 
-   jQuery(function($){
-   $("#Number").mask("+38(999) 999-9999");
-   });
+            // Replace the YouTube thumbnail with YouTube HTML5 Player
+            $(this).replaceWith(iframe);
+        });
+    });
+ });
 
-
-
+$(function() {
+    $("body").on("submit", ".form_newsletter", function(e) {
+        var message = "Укажите значения всех обязательных для заполнения полей!";
+        var ret = 0;
+        if ($(".name-block .field_value", this).val().length < 1) {
+            $(".name-block .field_value", this).css("border-color", "red");
+            ret = 1;
+        }
+        if ($(".email-block .field_value", this).val().length < 1) {
+            $(".email-block .field_value", this).css("border-color", "red");
+            ret = 1;
+        }
+        if ($("#p_p_acc", this).length > 0) {
+            if ($("#p_p_acc", this).prop("checked") == false) {
+                $(".form_newsletter_pp", this).css("border", "1px solid red");
+                ret = 1;
+            }
+        }
+        if (ret == 1) {
+            alert(message);
+            return false;
+        }
+        if (ret == 0){
+        }
+        
+    });
+    $(".phone-block input", this).keydown(function(e) {
+        if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 || (e.keyCode == 65 && (e.ctrlKey === true || e.metaKey === true)) || (e.keyCode >= 35 && e.keyCode <= 40)) {
+            return;
+        }
+        if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+            e.preventDefault();
+        }
+    });
+    $('body').on('change', '.surname-block input, .name-block input, .patronymic-block input, .phone-block input, .email-block input', function() {
+        $(this).css('border-color', '');
+    });
+    $('#Contact_date_of_birth').mask('00-00-0000', {
+        placeholder: 'ДД-ММ-ГГГГ'
+    });
 });

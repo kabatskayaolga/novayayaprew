@@ -78,7 +78,7 @@
     text-transform: uppercase;
     font-weight: 600
   }
-  .web iframe{
+  .web .iframe{
     margin-top: 0;
   }
   .text-block{
@@ -142,14 +142,20 @@
         <div>
         <h4>Нинель Виноградова</h4>
         <p>Любовь к себе. Магия Счастья</p>
-        <iframe src="https://www.youtube.com/embed/4FkFAVwZrQI" frameborder="0" allowfullscreen></iframe><br><br>
+        <div class="youtube iframe vid" id="4FkFAVwZrQI" data-params="modestbranding=1&showinfo=0&controls=0&vq=hd720" "></div>
+
+        <!-- <iframe src="https://www.youtube.com/embed/4FkFAVwZrQI" frameborder="0" allowfullscreen></iframe> -->
+        <br><br>
         </div>
 
         <div style="background-color: #e6e6e6; padding: 15px 15px 40px; margin: 0 -15px -40px; box-shadow: inset 0px 150px 100px -100px rgba(0, 0, 0, 0.45); padding-top: 50px">
 
          <h4>Ольга Денисова</h4>
           <p>Зеленый коктейль Красоты и Стройности</p>
-          <iframe src="https://www.youtube.com/embed/PxIYPqZOqQA" frameborder="0" allowfullscreen></iframe>
+
+          <div class="youtube iframe" id="PxIYPqZOqQA" data-params="modestbranding=1&showinfo=0&controls=0&vq=hd720" "></div>
+
+          <!-- <iframe src="https://www.youtube.com/embed/PxIYPqZOqQA" frameborder="0" allowfullscreen></iframe> -->
         </div>
       </div>
 
@@ -270,7 +276,7 @@ window.onload = function () {
 }
 
 }
-catch(){}
+catch(err){}
 </script>
 
 
@@ -342,54 +348,6 @@ catch(){}
 <script src="../js/script.js"></script>
 
 <script type="text/javascript">
-  
-  $('.slider').slick({
-    dots: false,
-    autoplay: true,
-    infinite: true,
-    speed: 1000,
-    fade: true,
-    adaptiveHeight: true,
-    cssEase: 'linear',
-    responsive: [
-      {
-        breakpoint: 769,
-        // здесь добавляем необходимые настройки
-      }
-    ]
-    });
-
-</script> 
-
-
-<!--  <script type="text/javascript">
-  
-  $('.slider2').slick({
-    dots: true,
-    infinite: true,
-    speed: 500,
-    fade: true,
-    cssEase: 'linear'
-    });
-
-</script>  -->
-
-<script>
-    $(window).scroll(function() {
-        if ($(this).scrollTop() > 100) {
-            if ($('#upbutton').is(':hidden')) {
-                $('#upbutton').css({opacity : 1}).fadeIn('slow');
-            }
-        } else { $('#upbutton').stop(true, false).fadeOut('fast'); }
-    });
-    $('#upbutton').click(function() {
-        $('html, body').stop().animate({scrollTop : 0}, 300);
-    });
-</script>
-
-
-
-<script type="text/javascript">
 try{
   VK.init({
     apiId: 6105175,
@@ -397,7 +355,7 @@ try{
   });
 
 }
-catch(){
+catch(err){
 
 }  
 </script>
