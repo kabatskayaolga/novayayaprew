@@ -9314,6 +9314,9 @@ button {
     button {
       font-size: 24px !important; } }
 
+.slick-arrow {
+  font-size: 0 !important; }
+
 @media (min-width: 780px) {
   .trening .row.text-center {
     position: absolute;
