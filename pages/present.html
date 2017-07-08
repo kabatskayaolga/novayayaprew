@@ -261,10 +261,16 @@ VK.Widgets.Comments("vk_comments", {limit: 5, attach: "*"});
 
 <div id="vk_comments"></div>
 <script type="text/javascript">
+try{
+
+
 window.onload = function () {
  VK.init({apiId: 6105175, onlyWidgets: true});
  VK.Widgets.Comments('vk_comments', {width: 500, limit: 15}, 321);
 }
+
+}
+catch(){}
 </script>
 
 
@@ -384,11 +390,16 @@ window.onload = function () {
 
 
 <script type="text/javascript">
+try{
   VK.init({
     apiId: 6105175,
     onlyWidgets: true
   });
 
+}
+catch(){
+
+}  
 </script>
 
 
