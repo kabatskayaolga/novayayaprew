@@ -9306,3 +9306,6 @@ footer {
       float: none;
       display: table-cell;
       vertical-align: top; } }
+
+button {
+  text-transform: uppercase; }
