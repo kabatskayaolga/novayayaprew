@@ -8052,7 +8052,11 @@ header {
   overflow: hidden;
   background-color: white;
   background-image: url(../images/left-section.png);
-  background-position: bottom left; }
+  background-position: bottom left;
+  background-repeat: no-repeat; }
+  @media (max-width: 700px) {
+    .results {
+      background-image: none; } }
   .results h2 {
     font-size: 40px;
     font-family: 'Lobster', cursive;
@@ -9204,7 +9208,7 @@ footer {
     left: 6%;
     top: 44px; }
   .review {
-    padding: 150px 40px 127px; }
+    padding: 50px 40px 50px; }
   .review iframe {
     width: 100%;
     height: 337px; }
@@ -9231,13 +9235,12 @@ footer {
   .intensive .present {
     position: static;
     width: 97%;
-    font-size: 16px; }
+    font-size: 16px;
+    padding: 20px 0; }
   .trening h3 {
     text-align: center;
     width: 100%;
     margin-top: 15px; }
-  .trening h2 {
-    left: 24%; }
   .trening .left_column {
     border: none;
     width: 100%;
@@ -9250,13 +9253,31 @@ footer {
     box-shadow: none;
     background-color: #fafafa; }
   .format {
-    padding-left: 35px; }
+    padding-left: 0px; }
     .format p {
       font-size: 16px; }
     .format h2 {
-      font-size: 37px; }
+      font-size: 37px;
+      padding: 30px 15px  0; }
     .format h5 {
-      font-size: 24px; } }
+      font-size: 24px; }
+    .format .event {
+      width: auto;
+      padding: 0 30px; }
+  .chance {
+    padding: 30px 15px; }
+    .chance p {
+      width: auto; }
+    .chance #f304c11fe33367 {
+      width: auto !important; }
+    .chance .fb_iframe_widget span {
+      width: 100% !important; }
+  footer .col-span {
+    margin: 0;
+    padding: 0 15px;
+    display: inline-block;
+    text-align: center;
+    width: 100%; } }
 
 @media (min-width: 990px) {
   .results {
