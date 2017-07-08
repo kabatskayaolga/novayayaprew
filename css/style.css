@@ -7584,7 +7584,8 @@ header {
     margin-bottom: 25px; }
     @media (max-width: 1366px) {
       header h4 {
-        font-size: 28px; } }
+        font-size: 28px;
+        margin-bottom: 15px; } }
   header h3 {
     font-size: 24px;
     text-transform: uppercase;
