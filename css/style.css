@@ -8961,7 +8961,8 @@ footer {
 @media (min-width: 990px) {
   .results {
     width: 100%;
-    display: table; }
+    display: table;
+    width: 100%; }
     .results .left_column,
     .results .right__column {
       float: none;
